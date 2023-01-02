@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+  }
+  .bg {
+    /* background-image: url('/images/Alamin\ Sultan\ Fevicon.png'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+    background-color: wheat;
+    text-align: center;
+    padding: 100px;
+    font-family: sans-serif;
+    text-decoration: underline wavy;
+    border: 20px red solid;
+  }
