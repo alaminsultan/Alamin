@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <title>Just for Practice</title>
-</head>
-<body>
-    <nav>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-    </nav>
-    <nav class="my-nav"></nav>
+    <style>
+      label {
+        display: block;
+        margin: 10px;
+      }
+      fieldset {
+        display: block;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>welcome to new dokan</h1>
 
-    <h2></h2>
-    <h2></h2>
-    <h2></h2>
+    <form>
+      <label for="name"
+        >Your name
+        <input type="text" placeholder="Your name" />
+      </label>
 
-</body>
+      <label for="email"
+        >Your email
+        <input type="email" placeholder="Your email" />
+      </label>
+
+      <label for="Phone">
+        Phone number
+        <input type="number" placeholder="Phone number" />
+      </label>
+
+      <fieldset>
+        <legend>ki ki loiba</legend>
+        <label for="Chal">
+          <input type="radio" name="lists" id="chal" />Dhal
+        </label>
+        <label for="Dal">
+          <input type="radio" name="lists" id="dal" />Dal
+        </label>
+        <label for="Dim">
+          <input type="radio" name="lists" id="chal" />Dim
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Loge ki ki lagbe</legend>
+        <label for="pani">
+          <input type="checkbox" name="add kor" id="pani" />Pani
+        </label>
+        <label for="Chipcs">
+          <input type="checkbox" name="add kor" id="Chipcs" /> Chipcs
+        </label>
+        <label for="Drinks">
+          <input type="checkbox" name="add kor" id="Drinks" />Drinks
+        </label>
+        <label for="Aloborta">
+          <input type="checkbox" name="add kor" id="Aloborta" />Aloborta
+        </label>
+      </fieldset>
+
+      <br />
+
+      <input type="reset" placeholder="Reset" />
+      <input type="submit" placeholder="submit" />
+    </form>
+  </body>
 </html>
