@@ -12,4 +12,11 @@
     font-family: sans-serif;
     text-decoration: underline wavy;
     border: 20px red solid;
+    border-radius: 20px;
+    line-height: 30px;
+  }
+
+  div{
+    display: inline-block;
+    block-size: 50px;
   }
