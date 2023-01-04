@@ -1,22 +1,66 @@
-* {
-    margin: 0;
-  }
-  .bg {
+.bg {
     /* background-image: url('/images/Alamin\ Sultan\ Fevicon.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     color: rgb(0, 0, 0);
     background-color: wheat;
     text-align: center;
-    padding: 100px;
+    padding: 40px 20px;
     font-family: sans-serif;
     text-decoration: underline wavy;
     border: 20px red solid;
     border-radius: 20px;
     line-height: 30px;
-  }
+}
 
-  div{
+div {
     display: inline-block;
-    block-size: 50px;
-  }
+    block-size: auto;
+}
+
+nav {
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    margin-right: 10px;
+    padding: 2px 10px;
+    border-radius: 3px;
+}
+
+nav li:hover {
+    background-color: blanchedalmond;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    margin: 10px;
+}
+
+fieldset {
+    display: block;
+    margin: 10px;
+}
+
+th,
+td {
+    border: 1px solid red;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+table {
+    border-collapse: collapse;
+}
