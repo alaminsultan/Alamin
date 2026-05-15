@@ -1,76 +1,234 @@
-.bg {
-  /* background-image: url('/images/Alamin\ Sultan\ Fevicon.png'); */
-  background-size: contain;
-  background-repeat: no-repeat;
-  color: rgb(0, 0, 0);
-  background-color: wheat;
-  text-align: center;
-  padding: 40px 20px;
-  font-family: sans-serif;
-  text-decoration: underline wavy;
-  border: 20px red solid;
-  border-radius: 20px;
-  line-height: 30px;
+:root {
+  --bg: #0e1424;
+  --surface: #ffffff;
+  --surface-alt: #f4f7ff;
+  --text: #1d2433;
+  --text-light: #57607a;
+  --primary: #1e66f5;
+  --primary-dark: #1749ad;
+  --border: #dfe5f5;
+  --shadow: 0 12px 30px rgba(17, 33, 69, 0.08);
 }
 
-div {
-  display: inline-block;
-  block-size: auto;
+* {
+  box-sizing: border-box;
 }
 
-nav {
-  align-items: center;
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: var(--surface);
+  line-height: 1.6;
 }
 
-nav > ul {
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(14, 20, 36, 0.95);
+  backdrop-filter: blur(6px);
+}
+
+.nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
 }
 
-nav li .drop {
-  display: none;
-  position: absolute;
-}
-
-nav li:hover > .drop {
-  display: block;
-  padding: 2px 2px;
-  background-color: antiquewhite;
-}
-nav li {
-  list-style: none;
-  margin-right: 10px;
-  padding: 2px 10px;
-  border-radius: 3px;
-}
-
-nav li:hover {
-  background-color: blanchedalmond;
-}
-
-nav li a {
+.logo {
+  color: #fff;
+  font-weight: 700;
   text-decoration: none;
-  color: black;
+  letter-spacing: 0.2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  background: linear-gradient(130deg, #0e1424 0%, #15294f 56%, #1f4380 100%);
+  color: #fff;
+  padding: 96px 0 76px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.eyebrow {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #9eb8ff;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-label {
-  display: block;
-  margin: 10px;
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  margin: 8px 0 18px;
 }
 
-fieldset {
-  display: block;
-  margin: 10px;
+.hero-text {
+  color: #dce5ff;
+  max-width: 55ch;
 }
 
-th,
-td {
-  border: 1px solid red;
-  padding: 5px 10px;
+.hero-card {
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.hero-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.hero-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  border-color: #cfd8ff;
+  color: #fff;
+}
+
+.section {
+  padding: 74px 0;
+}
+
+.section h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  margin: 0 0 10px;
+}
+
+.section-intro {
+  color: var(--text-light);
+  max-width: 70ch;
+}
+
+.cards {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.result {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.alt {
+  background: var(--surface-alt);
+}
+
+.about ul {
+  padding-left: 20px;
+}
+
+.cta {
+  background: #0b1222;
+  color: #fff;
+}
+
+.contact-form {
+  max-width: 620px;
+  margin-top: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #34415f;
+  background: #fff;
+}
+
+.site-footer {
   text-align: center;
-  text-transform: uppercase;
+  padding: 24px 16px;
+  background: #070b16;
+  color: #bdc8e9;
 }
 
-table {
-  border-collapse: collapse;
+@media (max-width: 900px) {
+  .hero-grid,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero {
+    padding-top: 76px;
+  }
 }
